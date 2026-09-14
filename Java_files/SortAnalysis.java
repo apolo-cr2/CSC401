@@ -4,11 +4,21 @@ public class SortAnalysis {
 
     public static void main(String[] args) {
         System.out.println("Sort Analysis Algorithm");
-        int size = 2000; // size. Change to find runtime.
+        int size = 1000; // size. Change to find runtime.
+        int finalCount;
         int[] array = new int[size];
-        
+
+        //Randomly filling array:
         fillArrayRand(array, size);
-        System.out.printf("Array size: %d - Count: %d%n", size, sortAnalysis(array, size));
+        //Count for sortAnalysis - with time measurement
+        long startTime = System.nanoTime(); 
+        finalCount = sortAnalysis(array, size);
+        long endTime = System.nanoTime();
+        double duration = (endTime - startTime);    //nanoseconds duration
+
+        //Print
+        System.out.printf("Array size: %d \n- Count: \t\t%d\n", size, finalCount);
+        System.out.printf("- Duration(ns): \t%.0f\n", duration);
     }
 
     // sortAnalysis Method

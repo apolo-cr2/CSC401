@@ -1,1 +1,1 @@
-CSC 401 Repository for projects
+Project 1: SortAnalysis program

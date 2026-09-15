@@ -1,1 +1,7 @@
+# Macos files
 .DS_Store
+# C files
+a.out
+project1
+# Java files
+*.class
